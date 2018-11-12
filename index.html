@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en' class=''>
+   <head>
+      <title>Contact Update</title>
+      <meta charset='UTF-8'>
+      <meta name="robots" content="noindex">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'>
+      <link rel='stylesheet' href='style.css'>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5S1o_X1XQzXAzPRmDelq0rxsiTu8Fm1U&v=3.exp&libraries=places"></script>
+      <script src="address.js"></script>
+   </head>
+   <body onload="initialize()">
+      <div class="flex-wrap">
+         <script type="text/javascript">var submitted=false;</script>
+         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='https://gofisk.com';}"></iframe>
+         <form action="https://docs.google.com/forms/d/e/1FAIpQLSe3Mpqp1ldQkxVxXopph0yAfBMsf0wdNPnUh80UjiWeghrBqg/formResponse" method="POST" class="color-card" id="cic" target="hidden_iframe" onsubmit="submitted=true;">
+            <div class="color-card__header">
+               <h1>Contact Update</h1>
+            </div>
+            <div class="color-card__body">
+               <p>Please fill out this form to help me update my contacts</p>
+               <label for="name"><i class="fas fa-user"></i>
+               <input type="text" name="entry.2005620554" placeholder="your name" required="required"/>
+               </label>
+               <label for="email"><i class="fas fa-envelope"></i>
+               <input type="email" name="entry.1045781291" placeholder="your email" required="required"/>
+               </label>
+               <label for="cell"><i class="fas fa-mobile-alt"></i>
+               <input type="cell" name="entry.1166974658" placeholder="your phone" required="required"/>
+               </label>
+               <p>Start typing your address then select match from the list</p>
+               <label for="address"><i class="fas fa-home"></i>
+               <input type="address" id="autocomplete" onFocus="geolocate()" placeholder="your address" required="required"/>
+               </label>
+               <p>*After selecting address, you can manually edit it below</p>
+               <!-- Street Address -->
+               <input disabled type="cic" name="entry.1065046570" id="street_number"/>
+               <input disabled type="cic" id="route"/>
+               <!-- City -->
+               <input disabled type="cic" name="entry.2041818036" id="locality"/>
+               <!-- State & Zip -->
+               <input disabled type="cic" name="entry.339316495" id="administrative_area_level_1"/>
+               <input disabled type="cic" name="entry.1363198271" id="postal_code"/>
+               <!-- Country -->
+               <input disabled type="cic" class="flex-item c-1column" id="country"/>
+            </div>
+            <!-- SUBMIT BUTTON -->
+            <a class="color-card__button" href="#0" onclick='document.getElementById("cic").submit()'>Submit</a>
+            <div class="success__tick">
+               <!--Fancy color square-->
+               <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="-75 20 250 50">
+                  <g transform="translate(0,-952.36218)">
+                     <path class="path" d="m 75.735759,983.36178 a 2.0002,2.0002 0 0 0 -1.1562,0.5937 c -10.261598,10.2838 -22.311598,22.29442 -32.718798,32.71882 L 25.26696,1002.8305 a 2.0085749,2.0085749 0 1 0 -2.5624,3.0938 l 18.000001,15 a 2.0002,2.0002 0 0 0 2.6874,-0.125 c 10.6635,-10.6864 23.3302,-23.30712 33.999998,-34.00002 a 2.0002,2.0002 0 0 0 -1.6562,-3.4375 z" fill="transparent" fill-opacity="1" stroke="#ffffff" marker="none" visibility="visible" display="inline" overflow="visible"/>
+                  </g>
+               </svg>
+               <h2>Thanks!</h2>
+               <p>Your info has been submitted</p>
+            </div>
+         </form>
+      </div>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+      <script src="script.js"></script>
+   </body>
+</html>
