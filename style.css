@@ -159,6 +159,24 @@ input[type="cic"]:disabled {
   color: rgba(0, 0, 0, 0.2);
 }
 
+/*RADIO BUTTONS*/
+.boxed label {
+  width: 40px;
+  height: 1.5em;
+  text-align: center;
+  padding: 10px;
+  transition: all 0.3s;
+}
+
+.boxed input[type="radio"] {
+  display: none;
+}
+
+.boxed input[type="radio"]:checked + label {
+    background-color: #25f18d;
+}
+
+
 @-webkit-keyframes bgGrad {
   0% {
     background-position: 10% 0%;

@@ -14,7 +14,7 @@
    <body onload="initialize()">
       <div class="flex-wrap">
          <script type="text/javascript">var submitted=false;</script>
-         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='https://gofisk.com';}"></iframe>
+         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='https://gofisk.com/cic';}"></iframe>
          <form action="https://docs.google.com/forms/d/e/1FAIpQLSe3Mpqp1ldQkxVxXopph0yAfBMsf0wdNPnUh80UjiWeghrBqg/formResponse" method="POST" class="color-card" id="cic" target="hidden_iframe" onsubmit="submitted=true;">
             <div class="color-card__header">
                <h1>Contact Update</h1>
@@ -22,29 +22,39 @@
             <div class="color-card__body">
                <p>Please fill out this form to help me update my contacts</p>
                <label for="name"><i class="fas fa-user"></i>
-               <input type="text" name="entry.2005620554" placeholder="your name" required="required"/>
+               <input type="text" name="entry.2005620554" placeholder="name" required="required"/>
                </label>
                <label for="email"><i class="fas fa-envelope"></i>
-               <input type="email" name="entry.1045781291" placeholder="your email" required="required"/>
+               <input type="text" name="entry.1045781291" placeholder="email" required="required"/>
                </label>
                <label for="cell"><i class="fas fa-mobile-alt"></i>
-               <input type="cell" name="entry.1166974658" placeholder="your phone" required="required"/>
+               <input type="text" name="entry.1166974658" placeholder="phone" required="required"/>
                </label>
-               <p>Start typing your address then select match from the list</p>
+                
+                <div class="boxed">
+                    Can I text you? 
+                  <input type="radio" id="yes" name="entry.712975196" value="yes">
+                  <label for="yes">yes</label>
+
+                  <input type="radio" id="no" name="entry.712975196" value="no">
+                  <label for="no">no</label>
+                </div>
+                
+               <p>Start typing your address then select it from the list (must allow location access)</p>
                <label for="address"><i class="fas fa-home"></i>
-               <input type="address" id="autocomplete" onFocus="geolocate()" placeholder="your address" required="required"/>
+               <input type="text" id="autocomplete" onFocus="geolocate()" placeholder="address" required="required"/>
                </label>
-               <p>*After selecting address, you can manually edit it below</p>
+               <p>If you don't want to allow location access, you can input your address manually</p>
                <!-- Street Address -->
-               <input disabled type="cic" name="entry.1065046570" id="street_number"/>
-               <input disabled type="cic" id="route"/>
+               <input name="entry.1065046570" placeholder="number" id="street_number"/>
+               <input placeholder="street" id="route"/>
                <!-- City -->
-               <input disabled type="cic" name="entry.2041818036" id="locality"/>
+               <input name="entry.2041818036" placeholder="city" id="locality"/>
                <!-- State & Zip -->
-               <input disabled type="cic" name="entry.339316495" id="administrative_area_level_1"/>
-               <input disabled type="cic" name="entry.1363198271" id="postal_code"/>
+               <input name="entry.339316495" placeholder="state" id="administrative_area_level_1"/>
+               <input name="entry.1363198271" placeholder="zip code" id="postal_code"/>
                <!-- Country -->
-               <input disabled type="cic" class="flex-item c-1column" id="country"/>
+               <input class="flex-item c-1column" placeholder="country" id="country"/>
             </div>
             <!-- SUBMIT BUTTON -->
             <a class="color-card__button" href="#0" onclick='document.getElementById("cic").submit()'>Submit</a>
