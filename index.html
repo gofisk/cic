@@ -15,7 +15,7 @@
       <div class="flex-wrap">
          <script type="text/javascript">var submitted=false;</script>
          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='https://gofisk.com/cic';}"></iframe>
-         <form action="https://docs.google.com/forms/d/e/1FAIpQLSe3Mpqp1ldQkxVxXopph0yAfBMsf0wdNPnUh80UjiWeghrBqg/formResponse" method="POST" class="color-card" id="cic" target="hidden_iframe" onsubmit="submitted=true;">
+         <form name="cicForm" action="https://docs.google.com/forms/d/e/1FAIpQLSe3Mpqp1ldQkxVxXopph0yAfBMsf0wdNPnUh80UjiWeghrBqg/formResponse" method="POST" class="color-card" id="cicForm" target="hidden_iframe" onsubmit="submitted=true;">
             <div class="color-card__header">
                <h1>Contact Update</h1>
             </div>
@@ -31,14 +31,14 @@
                <input type="text" name="entry.1166974658" placeholder="phone" required="required"/>
                </label>
                 
-                <div class="boxed">
+                <!--<div class="boxed">
                     Can I text you? 
                   <input type="radio" id="yes" name="entry.712975196" value="yes">
                   <label for="yes">yes</label>
 
                   <input type="radio" id="no" name="entry.712975196" value="no">
                   <label for="no">no</label>
-                </div>
+                </div>-->
                 
                <p>Start typing your address then select it from the list (must allow location access)</p>
                <label for="address"><i class="fas fa-home"></i>
@@ -46,15 +46,17 @@
                </label>
                <p>If you don't want to allow location access, you can input your address manually</p>
                <!-- Street Address -->
-               <input name="entry.1065046570" placeholder="house number" id="street_number"/>
-               <input name="entry.1526536734" placeholder="street" id="route"/>
+               <label for="address_manual">
+               <input type="text" name="entry.1065046570" placeholder="house number" id="street_number" required="required"/>
+               <input type="text" name="entry.1526536734" placeholder="street" id="route" required="required"/>
                <!-- City -->
-               <input name="entry.2041818036" placeholder="city" id="locality"/>
+               <input type="text" name="entry.2041818036" placeholder="city" id="locality" required="required"/>
                <!-- State & Zip -->
-               <input name="entry.339316495" placeholder="state" id="administrative_area_level_1"/>
-               <input name="entry.1363198271" placeholder="zip code" id="postal_code"/>
+               <input type="text" name="entry.339316495" placeholder="state" id="administrative_area_level_1" required="required"/>
+               <input type="text" name="entry.1363198271" placeholder="zip code" id="postal_code" required="required"/>
                <!-- Country -->
-               <input name="entry.1629546602" placeholder="country" id="country"/>
+               <input type="text" name="entry.1629546602" placeholder="country" id="country" required="required"/>
+                </label>
             </div>
             <!-- SUBMIT BUTTON -->
             <a class="color-card__button" href="#0" onclick='document.getElementById("cic").submit()'>Submit</a>
