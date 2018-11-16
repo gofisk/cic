@@ -15,7 +15,7 @@
       <div class="flex-wrap">
          <script type="text/javascript">var submitted=false;</script>
          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='https://gofisk.com/cic';}"></iframe>
-         <form name="cicForm" action="https://docs.google.com/forms/d/e/1FAIpQLSe3Mpqp1ldQkxVxXopph0yAfBMsf0wdNPnUh80UjiWeghrBqg/formResponse" method="POST" class="color-card" id="cicForm" target="hidden_iframe" onsubmit="submitted=true;">
+         <form name="cic" action="https://docs.google.com/forms/d/e/1FAIpQLSe3Mpqp1ldQkxVxXopph0yAfBMsf0wdNPnUh80UjiWeghrBqg/formResponse" method="POST" class="color-card" id="cic" target="hidden_iframe" onsubmit="submitted=true;">
             <div class="color-card__header">
                <h1>Contact Update</h1>
             </div>
@@ -42,7 +42,7 @@
                 
                <p>Start typing your address then select it from the list (must allow location access)</p>
                <label for="address"><i class="fas fa-home"></i>
-               <input type="text" id="autocomplete" onFocus="geolocate()" placeholder="address" required="required"/>
+               <input type="text" name="entry.505370008" id="autocomplete" onFocus="geolocate()" placeholder="address" required="required"/>
                </label>
                <p>If you don't want to allow location access, you can input your address manually</p>
                <!-- Street Address -->
